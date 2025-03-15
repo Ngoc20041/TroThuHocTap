@@ -1,0 +1,175 @@
+﻿backup index của Introduction
+{
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction - TroThuHocTap</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/TroThuHocTap.styles.css" asp-append-version="true" />
+    @* Font-awesome 6.5.1*@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body class="bg-gradient-to-br from-indigo-900 via-purple-900 to-indigo-800 text-white min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="container mx-auto px-4 py-6">
+        <div class="flex justify-between items-center">
+            <!-- Icon logo -->
+            <div class="flex items-center">
+                <div class="h-10 w-10 rounded-full bg-white text-indigo-600 flex items-center justify-center text-xl font-bold">AI</div>
+                <span class="ml-3 text-xl font-bold">Trợ Thủ Học Tập</span>
+            </div>
+            <!-- Navbar -->
+            <nav id="menu" class="hidden md:flex space-x-8">
+                <a href="#" class="hover:text-indigo-300 transition-colors duration-200">Thông tin</a>
+                <a href="#" class="hover:text-indigo-300 transition-colors duration-200">Tính năng</a>
+                <a href="#" class="hover:text-indigo-300 transition-colors duration-200">Liên hệ</a>
+            </nav>
+            <!-- Menu mobile-->
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <script>
+            document.getElementById("menu-btn").addEventListener("click", function () {
+                document.getElementById("menu").classList.toggle("hidden");
+            });
+        </script>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center relative overflow-hidden">
+        <!-- Chấm tròn Background -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute top-20 left-10 w-20 h-20 rounded-full bg-indigo-500 opacity-20 floating"></div>
+            <div class="absolute top-40 right-20 w-32 h-32 rounded-full bg-purple-500 opacity-20 floating-slow"></div>
+            <div class="absolute bottom-20 left-1/4 w-24 h-24 rounded-full bg-pink-500 opacity-20 floating-slower"></div>
+            <div class="absolute top-1/3 right-1/3 w-16 h-16 rounded-full bg-indigo-300 opacity-20 floating"></div>
+        </div>
+
+        <div class="container mx-auto px-4 py-12 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-center md:text-left">
+                    <!-- Thông tin -->
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                        Dự án <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">sắp hoàn thành </span> hãy chờ đón !
+                    </h1>
+                    <p class="text-lg md:text-xl text-indigo-200 mb-8 max-w-lg mx-auto md:mx-0">
+                        Chúng tôi đang làm việc chăm chỉ để mang đến cho bạn nền tảng mới. Đăng ký để trở thành người đầu tiên biết khi chúng tôi khởi chạy và truy cập sớm độc quyền.
+                    </p>
+
+                    <!-- Thời gian đếm ngược -->
+                    <div class="grid grid-cols-4 gap-4 max-w-md mx-auto md:mx-0 mb-10">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-2">
+                            <div id="days" class="text-3xl md:text-4xl font-bold">00</div>
+                            <div class="text-indigo-300 text-sm">Ngày</div>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-2">
+                            <div id="hours" class="text-3xl md:text-4xl font-bold">00</div>
+                            <div class="text-indigo-300 text-sm">Giờ</div>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-2">
+                            <div id="minutes" class="text-3xl md:text-4xl font-bold">00</div>
+                            <div class="text-indigo-300 text-sm">Phút</div>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-2">
+                            <div id="seconds" class="text-3xl md:text-4xl font-bold">00</div>
+                            <div class="text-indigo-300 text-sm">Giây</div>
+                        </div>
+                    </div>
+
+                    <script>
+                        // 🕒 Cài đặt ngày đếm ngược (Thay đổi ngày tùy ý)
+                        const targetDate = new Date("2025-04-30 00:00:00").getTime();
+
+                        function updateCountdown() {
+                            const now = new Date().getTime();
+                            const timeLeft = targetDate - now;
+
+                            if (timeLeft <= 0) {
+                                document.getElementById("days").textContent = "00";
+                                document.getElementById("hours").textContent = "00";
+                                document.getElementById("minutes").textContent = "00";
+                                document.getElementById("seconds").textContent = "00";
+                                return; // Dừng khi đếm ngược xong
+                            }
+
+                            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                            document.getElementById("days").textContent = days.toString().padStart(2, "0");
+                            document.getElementById("hours").textContent = hours.toString().padStart(2, "0");
+                            document.getElementById("minutes").textContent = minutes.toString().padStart(2, "0");
+                            document.getElementById("seconds").textContent = seconds.toString().padStart(2, "0");
+                        }
+
+                        // Gọi hàm updateCountdown mỗi giây
+                        setInterval(updateCountdown, 1000);
+                        updateCountdown(); // Chạy ngay khi load trang
+                    </script>
+
+
+                    <!-- Form nhận Email thông báo  -->
+                    <div class="max-w-md mx-auto md:mx-0">
+                        <form class="flex flex-col sm:flex-row gap-3">
+                            <input type="email" placeholder="Nhập Email của bạn" class="flex-grow px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-white/10 backdrop-blur-sm border border-white/20">
+                            <button type="submit" class="px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 rounded-lg font-medium transition-all duration-200 whitespace-nowrap">
+                                Nhận thông báo
+                            </button>
+                        </form>
+                        <p class="text-xs text-indigo-300 mt-3">
+                            Chúng tôi tôn trọng sự riêng tư của bạn. Không bao giờ có thư rác.
+                        </p>
+                    </div>
+
+                    <!-- Mạng xã hội -->
+                    <div class="mt-10 flex justify-center md:justify-start space-x-6">
+                        <a href="https://www.facebook.com/khong.oi.31/" target="_blank" class="text-indigo-300 hover:text-white transition-colors duration-200">
+                            <i class="fab fa-facebook text-xl"></i> Theo dõi dự án tại đây
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hình ành mạng lưới người (minh họa) -->
+                <div class="hidden md:block">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full opacity-20 blur-3xl"></div>
+                        <img src="https://cdn.pixabay.com/photo/2018/11/29/21/51/social-media-3846597_1280.png" alt="Illustration" class="relative z-1 mx-auto floating-slow">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="container mx-auto px-4 py-6 border-t border-white/10">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="text-sm text-indigo-300">
+                &copy; 2025 AI - Trợ Thủ Học Tập. Tất cả quyền được bảo lưu.
+            </div>
+            <div class="mt-4 md:mt-0">
+                <nav class="flex space-x-6 text-sm text-indigo-300">
+                    <a href="#" class="hover:text-white transition-colors duration-200">Chính sách bảo mật</a>
+                    <a href="#" class="hover:text-white transition-colors duration-200">Điều khoản dịch vụ</a>
+                    <a href="#" class="hover:text-white transition-colors duration-200">Liên hệ với chúng tôi</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+}

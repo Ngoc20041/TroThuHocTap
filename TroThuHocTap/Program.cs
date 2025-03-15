@@ -28,7 +28,7 @@ namespace TroThuHocTap
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Introduction}/{action=Index}/{id?}");
 
             app.Run();
         }

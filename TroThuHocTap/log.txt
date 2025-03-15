@@ -1,2 +1,6 @@
-﻿Viết gì đó vào đây...
-Tống Tuấn viết đây.....
+﻿16/03/2025, 00:12 -> 04:30
+{
+	Tạo IntroductionController
+	Tạo View Index
+	Cài đặt Tailwind 3.4
+}

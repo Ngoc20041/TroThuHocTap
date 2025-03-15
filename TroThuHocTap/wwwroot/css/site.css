@@ -1,22 +1,39 @@
-html {
-  font-size: 14px;
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    /* .btn-primary {
+      @apply py-1.5 px-3 text-center bg-blue-700 rounded-md text-white;
+  } */
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+.active {
+    color: darksalmon;
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+.floating {
+    animation: float 6s ease-in-out infinite;
 }
 
-body {
-  margin-bottom: 60px;
+.floating-slow {
+    animation: float 8s ease-in-out infinite;
+}
+
+.floating-slower {
+    animation: float 10s ease-in-out infinite;
 }
