@@ -27,15 +27,20 @@
             <!-- Navbar desktop -->
             <nav>
                 <ul id="menu" class="hidden md:flex sm:space-x-8 text-white">
-                    <li>
+                    <li class="mt-1">
                         <a href="@Url.Action("Index","Introduction")" class="hover:text-indigo-300 transition-colors duration-200">Thông tin</a>
                     </li>
-                    <li>
+                    <li class="mt-1">
                         <a href="@Url.Action("Test","Introduction")" class="hover:text-indigo-300 transition-colors duration-200">Tính năng</a>
                     </li>
-                    <li>
+                    <li class="mt-1">
                         <a href="#" class="hover:text-indigo-300 transition-colors duration-200">Liên hệ</a>
                     </li>
+                    <form action="@Url.Action("Index","Chat")" method="post">
+                        <button type="submit" class=" px-6 py-1 bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 rounded-lg font-medium transition-all duration-200 whitespace-nowrap">
+                            Dùng thử <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </form>
                 </ul>
             </nav>
 
@@ -50,7 +55,7 @@
             <div id="mobile-menu" class=" inset-0 z-50 bg-black bg-opacity-10 hidden">
                 <div class="absolute top-0 right-0 w-64 h-full bg-gradient-to-br from-indigo-900 via-purple-900 to-indigo-800 shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out" id="menu-panel">
                     <div class="flex justify-end p-4">
-                        <button id="close-btn" class="text-gray-600 focus:outline-none">
+                        <button id="close-btn" class="text-white focus:outline-none">
                             <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                             </svg>
@@ -65,6 +70,11 @@
                         <li><a href="#" class="text-lg font-semibold hover:text-indigo-400 transition-colors duration-200">Thông tin</a></li>
                         <li><a href="#" class="text-lg font-semibold hover:text-indigo-400 transition-colors duration-200">Tính năng</a></li>
                         <li><a href="#" class="text-lg font-semibold hover:text-indigo-400 transition-colors duration-200">Liên hệ</a></li>
+                        <li>
+                            <button type="submit" class="px-6 py-1 bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 rounded-lg font-medium transition-all duration-200 whitespace-nowrap">
+                                Dùng thử <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -95,7 +105,7 @@
 
                 // Đóng menu khi nhấn bên ngoài
                 mobileMenu.addEventListener('click', (event) => {
-                    if (event.target === mobileMenu) closeMenu();
+                    if (event.target !== mobileMenu) closeMenu();
                 });
 
                 // Đóng menu khi nhấn phím ESC
@@ -104,7 +114,7 @@
                 });
 
                 // active
-                
+
 
             </script>
 
@@ -153,7 +163,7 @@
 
                     <script>
                         // 🕒 Cài đặt ngày đếm ngược (Thay đổi ngày tùy ý)
-                        const targetDate = new Date("2025-04-30 00:00:00").getTime();
+                        const targetDate = new Date("2025-04-29 00:00:00").getTime();
 
                         function updateCountdown() {
                             const now = new Date().getTime();
