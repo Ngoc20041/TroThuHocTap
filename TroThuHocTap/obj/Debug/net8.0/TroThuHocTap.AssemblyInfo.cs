@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TroThuHocTap")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a31f7b56ac6ba2f185e0d01b8ded3694e9c4438")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e08916f4554a10e24908029b19b659dcc011928")]
 [assembly: System.Reflection.AssemblyProductAttribute("TroThuHocTap")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TroThuHocTap")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
