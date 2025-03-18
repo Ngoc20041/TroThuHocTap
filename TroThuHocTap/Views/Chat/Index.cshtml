@@ -8,7 +8,7 @@
     <div class="flex gap-4 max-w-3xl mx-auto">
         <div class="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-700 flex-shrink-0"></div>
         <div class="flex-1">
-            <div class="font-medium dark:text-white mb-1">Abhii</div>
+            <div class="font-medium dark:text-white mb-1">Tống Tuấn</div>
             <div class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm dark:text-gray-200">
                 Hey, can you explain how the model determines token usage and tracks interactions?
             </div>
@@ -22,7 +22,7 @@
             </svg>
         </div>
         <div class="flex-1">
-            <div class="font-medium dark:text-white mb-1">ARK.io</div>
+            <div class="font-medium dark:text-white mb-1">Trợ thủ học tập</div>
             <div class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm dark:text-gray-200">
                 Our model counts tokens in both input and output, including spaces and special characters. Each token corresponds roughly to one word, depending on the language and complexity of the sentence. For more detailed tracking of your interactions, we use timestamps and session IDs to ensure the most relevant responses.
             </div>
@@ -54,9 +54,11 @@
                     </svg>
                 </button>
             </div>
-            <textarea class="w-full p-4 bg-transparent border-0 focus:ring-0 dark:text-white" rows="3" placeholder="Type your message..."></textarea>
-            <div class="flex max-w-sm rounded-md bg-gradient-to-tr from-pink-300 to-blue-300 p-0.5 shadow-lg">
-                <button class="flex-1 font-bold text-sm bg-white px-2 py-0.5 rounded-md">Gửi</button>
+            <textarea class="w-full p-4 bg-transparent border-0 focus:ring-0 dark:text-white" rows="3" placeholder="Hãy nhập câu hỏi..."></textarea>
+            <div class="w-full p-4 bg-transparent border-0 focus:ring-0 dark:text-white text-center ">
+                <form action="@Url.Action("Test","Introduction")" method="post">
+                <button type="submit" class="flex-1 font-bold text-xl bg-white px-2 py-0.5 rounded-md ">Gửi</button>
+                </form>
             </div>
 
     </div>
