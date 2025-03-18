@@ -104,3 +104,4 @@ D:\ASP.NET\DuAn\TroThuHocTap\TroThuHocTap\obj\Debug\net8.0\refint\TroThuHocTap.d
 D:\ASP.NET\DuAn\TroThuHocTap\TroThuHocTap\obj\Debug\net8.0\TroThuHocTap.pdb
 D:\ASP.NET\DuAn\TroThuHocTap\TroThuHocTap\obj\Debug\net8.0\TroThuHocTap.genruntimeconfig.cache
 D:\ASP.NET\DuAn\TroThuHocTap\TroThuHocTap\obj\Debug\net8.0\ref\TroThuHocTap.dll
+C:\Users\admin\Source\Repos\TroThuHocTap\TroThuHocTap\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
