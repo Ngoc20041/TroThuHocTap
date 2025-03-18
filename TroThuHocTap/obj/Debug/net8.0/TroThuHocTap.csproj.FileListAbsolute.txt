@@ -66,7 +66,6 @@ C:\Users\admin\Source\Repos\TroThuHocTap\TroThuHocTap\obj\Debug\net8.0\staticweb
 C:\Users\admin\Source\Repos\TroThuHocTap\TroThuHocTap\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.TroThuHocTap.props
 C:\Users\admin\Source\Repos\TroThuHocTap\TroThuHocTap\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.TroThuHocTap.props
 C:\Users\admin\Source\Repos\TroThuHocTap\TroThuHocTap\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\admin\Source\Repos\TroThuHocTap\TroThuHocTap\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\admin\Source\Repos\TroThuHocTap\TroThuHocTap\obj\Debug\net8.0\TroThuHocTap.dll
 C:\Users\admin\Source\Repos\TroThuHocTap\TroThuHocTap\obj\Debug\net8.0\refint\TroThuHocTap.dll
 C:\Users\admin\Source\Repos\TroThuHocTap\TroThuHocTap\obj\Debug\net8.0\TroThuHocTap.pdb

@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\TroThuHocTap.bundle.scp.css"
     },
     {
+      "Id": "D:\\ASP.NET\\DuAn\\TroThuHocTap\\TroThuHocTap\\wwwroot\\assets\\images\\logos\\AI_Logo.png",
+      "PackagePath": "staticwebassets\\assets\\images\\logos\\AI_Logo.png"
+    },
+    {
+      "Id": "D:\\ASP.NET\\DuAn\\TroThuHocTap\\TroThuHocTap\\wwwroot\\assets\\images\\logos\\AI_logo_blue.png",
+      "PackagePath": "staticwebassets\\assets\\images\\logos\\AI_logo_blue.png"
+    },
+    {
       "Id": "D:\\ASP.NET\\DuAn\\TroThuHocTap\\TroThuHocTap\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
