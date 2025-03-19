@@ -173,3 +173,158 @@
 </html>
 
 }
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////
+back up chat index
+{
+    @{
+    Layout = "~/Views/Layouts/Chat/_App.cshtml";
+}
+
+<div class="flex flex-col h-screen">
+    <!-- Chat Container -->
+    <div id="chat-container" class="flex-1 overflow-auto p-4 space-y-6">
+        <!-- User request (bên phải) -->
+        <div class="flex gap-4 max-w-3xl mx-auto justify-end">
+            <div class="flex-1">
+                <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 shadow-sm dark:text-gray-200 flex justify-end">
+                    Hey, can you explain how the model determines token usage and tracks interactions?
+                </div>
+            </div>
+        </div>
+        <!-- Chat reply (bên trái) -->
+        <div class="flex gap-4 max-w-3xl mx-auto">
+            <div class="w-8 h-8 rounded-full bg-primary flex-shrink-0 flex items-center justify-center">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+            </div>
+            <div class="flex-1">
+                <div class="font-medium dark:text-white mb-1">Trợ thủ học tập</div>
+                <div class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm dark:text-gray-200">
+                    Our model counts tokens in both input and output, including spaces and special characters. Each token corresponds roughly to one word, depending on the language and complexity of the sentence. For more detailed tracking of your interactions, we use timestamps and session IDs to ensure the most relevant responses.
+                </div>
+                <div class="flex items-center gap-2 mt-2">
+                    <button class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                        </svg>
+                    </button>
+                    <span class="text-sm text-gray-500 dark:text-gray-400">32 tokens</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Message Input -->
+    <div class="border-t border-gray-200 dark:border-gray-700 p-4">
+        <div class="max-w-3xl mx-auto">
+            <div class="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
+                <div class="flex items-center p-2">
+                    <textarea id="message-input" class="w-full p-4 bg-transparent border-0 focus:ring-0 dark:text-white resize-none" rows="1" placeholder="Hãy nhập câu hỏi..."></textarea>
+                    <button id="send-button" class="ml-2 p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+                        Gửi
+                    </button>
+                </div>
+                <div class="flex items-center gap-2 p-2 border-t border-gray-200 dark:border-gray-700">
+                    <button class="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </button>
+                    <button class="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Lấy các phần tử
+    const chatContainer = document.getElementById('chat-container');
+    const messageInput = document.getElementById('message-input');
+    const sendButton = document.getElementById('send-button');
+
+    // Hàm cuộn xuống dưới cùng
+    function scrollToBottom() {
+        chatContainer.scrollTop = chatContainer.scrollHeight;
+    }
+
+    // Hàm thêm tin nhắn mới
+    function addUserMessage(message) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = 'flex gap-4 max-w-3xl mx-auto justify-end';
+        messageDiv.innerHTML = `
+                <div class="flex-1">
+                    <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 shadow-sm dark:text-gray-200">
+                        ${message}
+                    </div>
+                </div>
+            `;
+        chatContainer.appendChild(messageDiv);
+        scrollToBottom();
+    }
+
+    // Tự động điều chỉnh chiều cao textarea
+    function adjustTextareaHeight() {
+        messageInput.style.height = 'auto'; // Reset để tính lại chiều cao
+        messageInput.style.height = `${messageInput.scrollHeight}px`; // Đặt chiều cao dựa trên nội dung
+    }
+
+    // Khởi tạo chiều cao ban đầu
+    messageInput.style.height = '2.5rem'; // Chiều cao cố định ban đầu (1 dòng)
+
+    // Xử lý sự kiện nhập liệu
+    messageInput.addEventListener('input', adjustTextareaHeight);
+
+    function addAssistantMessage(message) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = 'flex gap-4 max-w-3xl mx-auto';
+        messageDiv.innerHTML = `
+            <div class="w-8 h-8 rounded-full bg-primary flex-shrink-0 flex items-center justify-center">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+            </div>
+            <div class="flex-1">
+                <div class="font-medium dark:text-white mb-1">Trợ thủ học tập</div>
+                <div class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm dark:text-gray-200">
+                    ${message}
+                </div>
+            </div>
+        `;
+        chatContainer.appendChild(messageDiv);
+        scrollToBottom();
+    }
+
+    // Xử lý sự kiện gửi tin nhắn
+
+    sendButton.addEventListener('click', () => {
+        const message = messageInput.value.trim();
+        if (message) {
+            addUserMessage(message);
+            setTimeout(() => addAssistantMessage("Đây là phản hồi tự động!"), 500); // Giả lập trả lời sau 0.5 giây
+            messageInput.value = '';
+            messageInput.style.height = '2.5rem';
+        }
+    });
+
+    // Gửi tin nhắn bằng phím Enter
+    messageInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            sendButton.click();
+        }
+    });
+
+    // Cuộn xuống dưới khi tải trang
+    scrollToBottom();
+</script>
+}

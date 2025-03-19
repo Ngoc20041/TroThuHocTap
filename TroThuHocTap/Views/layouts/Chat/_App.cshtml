@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="~/assets/images/logos/AI_have_backgourd.png" type="png" rel="icon" />
     <title> AI - Trợ Thủ Học Tập</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+
     <!--tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!--font-awesome -->
@@ -22,34 +26,90 @@
             }
         }
     </script>
-    
+
 
 </head>
 <body class="h-full bg-white dark:bg-gray-900">
     <div class="flex h-full">
         <!-- Sidebar -->
-        <aside class="w-72 bg-gray-50 dark:bg-gray-800 p-4 hidden md:block border-r border-gray-200 dark:border-gray-700">
-            <div class="flex items-center gap-2 mb-8">
-                <div class="flex items-center">
+        <aside class="w-72 bg-gray-50 dark:bg-gray-800 p-4 hidden md:block border-r border-gray-200 dark:border-gray-700 overflow-y-auto">
+            <div class="flex items-center gap-2 mb-8 top-0 w-100">
+                <div class="flex items-center ">
                     <div class="h-10 w-10 rounded-full bg-white text-indigo-600 flex items-center justify-center text-xl font-bold">AI</div>
                     <span class="hidden sm:block ml-3 text-md font-bold">Trợ Thủ Học Tập</span>
                 </div>
             </div>
-            <!-- Navigation -->
-            <nav class="space-y-2">
-                <a href="#" class="flex items-center gap-3 px-3 py-2 text-gray-700 dark:text-gray-200 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-                    </svg>
-                    Tạo Chat Mới
-                    <span class="ml-auto bg-gray-200 dark:bg-gray-600 px-2 py-0.5 rounded-full text-xs">1</span>
-                </a>
-                <a href="#" class="flex items-center gap-3 px-3 py-2 text-gray-700 dark:text-gray-200 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                    </svg>
-                    Library
-                    <span class="ml-auto bg-gray-200 dark:bg-gray-600 px-2 py-0.5 rounded-full text-xs">2</span>
+
+            
+            <div class="mt-5 ms-3">
+                <!-- Navigation -->
+                <nav class="space-y-2 d-flex">
+                    <a href="#" class="flex items-center gap-3 px-4 py-2 text-gray-700 dark:text-gray-200 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600">
+                        Tạo Chat Mới <span class="flex items-center ml-auto bg-gray-200 dark:bg-gray-600 px-2 py-2 rounded-full text-xs"><i class="fa-solid fa-plus"></i></span>
+                    </a>
+                    <a href="#" class="flex items-center gap-3 px-4 py-2 text-gray-700 dark:text-gray-200 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600">
+                        Hướng dẫn sử dụng
+                        <!--so luong Thong bao-->
+                        <span class="flex items-center ml-auto bg-gray-200 dark:bg-gray-600 px-2 py-0.5 rounded-full text-xs"><i class="fa-solid fa-bell"></i>1</span>
+                    </a>
+                </nav>
+                <hr class="mt-2" />
+                <span class="text-lg font-semibold">Đoạn chat</span>
+
+                <ul class="flex flex-col space-y-2 overflow-y-auto h-[550px] mt-3">
+                    <li class="flex items-center gap-3 px-4 py-2 text-gray-700 dark:text-gray-200 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600">
+                        <a href="#"> <i class="me-1 fa-regular fa-comments"></i> Xin Chào bạn</a>
+                    </li>
+                    <li class="flex items-center gap-3 px-4 py-2 text-gray-700 dark:text-gray-200 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600">
+                        <i class="fa-regular fa-comments"></i> Bạn khỏe không?
+                    </li>
+                    <li class="flex items-center gap-3 px-4 py-2 text-gray-700 dark:text-gray-200 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600">
+                        <i class="fa-regular fa-comments"></i> Hôm nay trời đẹp ghê!
+                    </li>
+                    <li class="flex items-center gap-3 px-4 py-2 text-gray-700 dark:text-gray-200 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600">
+                        <i class="fa-regular fa-comments"></i> Cùng nhau làm việc chăm chỉ nhé!
+                    </li>
+                    <li class="flex items-center gap-3 px-4 py-2 text-gray-700 dark:text-gray-200 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600">
+                        <i class="fa-regular fa-comments"></i> Hẹn gặp lại!
+                    </li>
+                    <!-- Thêm nhiều tin nhắn để kiểm tra scroll -->
+                    <li class="flex items-center gap-3 px-4 py-2 text-gray-700 dark:text-gray-200 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600">
+                        <i class="fa-regular fa-comments"></i> Bạn đang làm gì vậy?
+                    </li>
+                    <li class="flex items-center gap-3 px-4 py-2 text-gray-700 dark:text-gray-200 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600">
+                        <i class="fa-regular fa-comments"></i> Trời sắp mưa rồi!
+                    </li>
+                    <li class="flex items-center gap-3 px-4 py-2 text-gray-700 dark:text-gray-200 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600">
+                        <i class="fa-regular fa-comments"></i> Chúc bạn một ngày vui vẻ!
+                    </li>
+                    <li class="flex items-center gap-3 px-4 py-2 text-gray-700 dark:text-gray-200 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600">
+                        <i class="fa-regular fa-comments"></i> Trời sắp mưa rồi!
+                    </li>
+                    <li class="flex items-center gap-3 px-4 py-2 text-gray-700 dark:text-gray-200 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600">
+                        <i class="fa-regular fa-comments"></i> Chúc bạn một ngày vui vẻ!
+                    </li>
+                    <li class="flex items-center gap-3 px-4 py-2 text-gray-700 dark:text-gray-200 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600">
+                        <i class="fa-regular fa-comments"></i> Trời sắp mưa rồi!
+                    </li>
+                    <li class="flex items-center gap-3 px-4 py-2 text-gray-700 dark:text-gray-200 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600">
+                        <i class="fa-regular fa-comments"></i> Chúc bạn một ngày vui vẻ!
+                    </li>
+                    <li class="flex items-center gap-3 px-4 py-2 text-gray-700 dark:text-gray-200 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600">
+                        <i class="fa-regular fa-comments"></i> Trời sắp mưa rồi!
+                    </li>
+                    <li class="flex items-center gap-3 px-4 py-2 text-gray-700 dark:text-gray-200 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600">
+                        <i class="fa-regular fa-comments"></i> Chúc bạn một ngày vui vẻ!
+                    </li>
+                </ul>
+            </div>
+            <hr class="mt-2" />
+            <!-- footer sibar -->
+            <nav class="space-y-2 d-flex mt-3">
+              
+                <a href="#" class="flex items-center gap-3 px-4 py-2 text-gray-700 dark:text-gray-200 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600">
+                    Tài Khoản 
+                    <!--so luong Thong bao-->
+                    <span class="flex items-center ml-auto bg-gray-200 dark:bg-gray-600 px-2 py-2 rounded-full text-xs"><i class="fa-solid fa-gear"></i></span>
                 </a>
             </nav>
         </aside>
@@ -66,21 +126,45 @@
                     <h2 class="text-lg font-semibold dark:text-white">Trợ Thủ Học Tập</h2>
                     <span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-sm text-gray-600 dark:text-gray-300">GPT-4</span>
                 </div>
-                <div class="flex items-center gap-3">
-                    <button class="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">
-                        <i class="fa-solid fa-gear"></i>
-                    </button>
-                </div>
+
             </header>
             @RenderBody()
         </main>
     </div>
+    <script>
+        // menu điện thoại
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuPanel = document.getElementById('menu-panel');
 
-    <!-- Author Attribution -->
-    <div class="fixed bottom-4 right-4 text-sm text-gray-500 dark:text-gray-400">
-        <a href="https://abhirajk.vercel.app" target="_blank" rel="noopener noreferrer" class="hover:text-primary">
-            Created by Abhiraj
-        </a>
-    </div>
+        function openMenu() {
+            mobileMenu.classList.remove('hidden');
+            setTimeout(() => {
+                menuPanel.classList.remove('translate-x-full');
+            }, 10);
+        }
+
+        function closeMenu() {
+            menuPanel.classList.add('translate-x-full');
+            setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+            }, 300); // Chờ hiệu ứng xong mới ẩn menu
+        }
+
+        menuBtn.addEventListener('click', openMenu);
+        closeBtn.addEventListener('click', closeMenu);
+
+        // Đóng menu khi nhấn bên ngoài
+        mobileMenu.addEventListener('click', (event) => {
+            if (event.target !== mobileMenu) closeMenu();
+        });
+
+        // Đóng menu khi nhấn phím ESC
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') closeMenu();
+        });
+
+    </script>
 </body>
 </html>
