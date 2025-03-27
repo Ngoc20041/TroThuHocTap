@@ -13,3 +13,4 @@ ok
 log.txt
 // 
 huynh da tham gia
+test log.txt
