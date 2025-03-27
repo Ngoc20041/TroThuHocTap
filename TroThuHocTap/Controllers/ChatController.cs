@@ -10,6 +10,10 @@ namespace TroThuHocTap.Controllers
         {
             return View();
         }
+        public ActionResult Test()
+        {
+            return View();
+        }
 
         // GET: HomeChat/Details/5
         public ActionResult Details(int id)
