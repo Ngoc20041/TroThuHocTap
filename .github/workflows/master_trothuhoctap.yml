@@ -54,9 +54,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.__clientidsecretname__ }}
-          tenant-id: ${{ secrets.__tenantidsecretname__ }}
-          subscription-id: ${{ secrets.__subscriptionidsecretname__ }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_8C1571A98298480F8C41B32A6189A631 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_BD97E80A058342FA9D0E57B52FEC15EB }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_9A94BE72CFEF437992E943A68F521FBA }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
@@ -65,3 +65,4 @@ jobs:
           app-name: 'TroThuHocTap'
           slot-name: 'Production'
           package: .
+          
