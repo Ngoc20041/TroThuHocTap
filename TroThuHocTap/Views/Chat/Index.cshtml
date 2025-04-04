@@ -35,6 +35,74 @@
                 </div>
             </div>
         </div>
+
+
+
+
+        <!-- Chat reply (bên trái) -->
+        <div class="flex gap-4 max-w-3xl mx-auto">
+            <div class="w-8 h-8 rounded-full bg-primary flex-shrink-0 flex items-center justify-center">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+            </div>
+            <div class="flex-1">
+                <div class="font-medium dark:text-white mb-1">Trợ thủ học tập</div>
+                <div class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm dark:text-gray-200">
+                    Our model counts tokens in both input and output, including spaces and special characters. Each token corresponds roughly to one word, depending on the language and complexity of the sentence. For more detailed tracking of your interactions, we use timestamps and session IDs to ensure the most relevant responses.
+                </div>
+                <div class="flex items-center gap-2 mt-2">
+                    <button class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                        </svg>
+                    </button>
+                    <span class="text-sm text-gray-500 dark:text-gray-400">32 tokens</span>
+                </div>
+            </div>
+        </div><!-- Chat reply (bên trái) -->
+        <div class="flex gap-4 max-w-3xl mx-auto">
+            <div class="w-8 h-8 rounded-full bg-primary flex-shrink-0 flex items-center justify-center">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+            </div>
+            <div class="flex-1">
+                <div class="font-medium dark:text-white mb-1">Trợ thủ học tập</div>
+                <div class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm dark:text-gray-200">
+                    Our model counts tokens in both input and output, including spaces and special characters. Each token corresponds roughly to one word, depending on the language and complexity of the sentence. For more detailed tracking of your interactions, we use timestamps and session IDs to ensure the most relevant responses.
+                </div>
+                <div class="flex items-center gap-2 mt-2">
+                    <button class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                        </svg>
+                    </button>
+                    <span class="text-sm text-gray-500 dark:text-gray-400">32 tokens</span>
+                </div>
+            </div>
+        </div><!-- Chat reply (bên trái) -->
+        <div class="flex gap-4 max-w-3xl mx-auto">
+            <div class="w-8 h-8 rounded-full bg-primary flex-shrink-0 flex items-center justify-center">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+            </div>
+            <div class="flex-1">
+                <div class="font-medium dark:text-white mb-1">Trợ thủ học tập</div>
+                <div class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm dark:text-gray-200">
+                    Our model counts tokens in both input and output, including spaces and special characters. Each token corresponds roughly to one word, depending on the language and complexity of the sentence. For more detailed tracking of your interactions, we use timestamps and session IDs to ensure the most relevant responses.
+                </div>
+                <div class="flex items-center gap-2 mt-2">
+                    <button class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                        </svg>
+                    </button>
+                    <span class="text-sm text-gray-500 dark:text-gray-400">32 tokens</span>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Message Input -->
@@ -84,7 +152,7 @@
         messageDiv.className = 'flex gap-4 max-w-3xl mx-auto justify-end';
         messageDiv.innerHTML = `
                     <div class="flex-1">
-                        <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 shadow-sm dark:text-gray-200">
+                            <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 shadow-sm dark:text-gray-200 flex justify-end">
                             ${message}
                         </div>
                     </div>
